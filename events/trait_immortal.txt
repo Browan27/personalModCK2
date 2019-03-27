@@ -1,0 +1,322 @@
+namespace = EVTIM
+character_event = {
+	id = EVTIM.1
+	desc = "EVTIM.1"
+	picture = GFX_evt_crusaders
+
+	ai = no							
+	prisoner = no
+	mean_time_to_happen = {
+		months = 480					
+		modifier = {
+			factor = 1.5
+			trait = slow
+		}
+		modifier = {
+			factor = 0.90
+			trait = quick
+		}
+		modifier = {
+			factor = 0.75
+			trait = genius
+		}
+	}
+	
+	option = {
+		name = "EVTIM.2"
+		add_trait = immortal
+	}
+	option = {
+		name = "EVTIM.3"
+		remove_trait = immortal
+	}
+	option = {
+		name = "EVTIM.4"
+        prestige = 10
+	}
+}
+
+character_event = {
+	id = EVTIM.5
+	desc = "EVTIM.5"
+	picture = GFX_evt_crusaders
+    
+    mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0
+		}
+	}
+
+	trigger = {
+		trait = immortal
+        OR {
+            NOT = { trait = strong }
+			NOT = { trait = genius }
+            NOT = { trait = fair }
+            trait = clubfooted
+            trait = hunchback
+            trait = harelip
+            trait = lisp
+            trait = stutter
+            trait = ugly
+            trait = weak
+            trait = slow
+            trait = imbecile
+        }
+	}
+	
+	option = {
+		name = "EVTIM.6"
+		add_trait = strong
+        add_trait = genius
+        add_trait = fair
+        remove_trait = clubfooted
+        remove_trait = hunchback
+        remove_trait = harelip
+        remove_trait = lisp
+        remove_trait = stutter
+        remove_trait = ugly
+        remove_trait = weak
+        remove_trait = slow
+        remove_trait = imbecile
+	}
+}
+
+character_event = {
+	id = EVTIM.7
+	desc = "EVTIM.7"
+	picture = GFX_evt_crusaders
+	trigger = {
+		trait = immortal
+	}
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	option = {
+		name = "EVTIM.8"
+		random_list = {
+            70 = {
+            	character_event = {
+					id = EVTIM.10
+					tooltip = EVTIM.10_tooltip
+				}
+			}
+			30 = {
+				character_event = {
+					id = EVTIM.11
+					tooltip = EVTIM.11_tooltip
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTIM.9"
+        piety = 10
+	}
+}
+
+character_event = {
+	id = EVTIM.10
+	desc = "EVTIM.10"
+	picture = GFX_evt_crusaders
+	is_triggered_only = yes
+	option = {
+		name = "EVTIM.12"
+		wealth = 10000
+		prestige = 5000
+		piety = 3500
+	}
+}
+character_event = {
+	id = EVTIM.11
+	desc = "EVTIM.11"
+	picture = GFX_evt_crusaders
+	is_triggered_only = yes
+	option = {
+		name = "EVTIM.13"
+		add_trait = maimed
+	}
+}
+character_event = {
+	id = EVTIM.14
+	desc = "EVTIM.14"
+	picture = GFX_evt_crusaders
+	trigger = {
+        trait = immortal
+		OR = {
+			trait = incapable
+			trait = lunatic
+			trait = possessed
+		}
+	}
+	mean_time_to_happen= {
+		months = 4
+	}
+	option = {
+		name = "EVTIM.15"
+		remove_trait = incapable
+		remove_trait = lunatic
+		remove_trait = possessed
+	}
+}
+character_event = {
+	id = EVTIM.16
+	desc = "EVTIM.16"
+	picture = GFX_evt_crusaders
+	trigger = {
+        trait = immortal
+		OR = {
+			trait = infirm
+			trait = ill
+			trait = sickly
+			trait = cough
+			trait = fever
+			trait = diarrhea
+			trait = vomiting
+			trait = chest_pain
+			trait = cramps
+			trait = rash
+			trait = headache
+			trait = abdominal_pain
+			trait = fatigue
+			trait = malaise
+			trait = infection
+			trait = has_tuberculosis
+			trait = has_typhoid_fever
+			trait = has_typhus
+			trait = has_bubonic_plague
+			trait = has_measles
+			trait = has_small_pox
+			trait = flu
+			trait = dysentery
+			trait = gout
+			trait = food_poisoning
+			trait = rabies
+			trait = cancer
+		}
+	}
+	mean_time_to_happen= {
+		months = 4
+	}
+	option = {
+		name = "EVTIM.17"
+		remove_trait = infirm
+			remove_trait = ill
+			remove_trait = sickly
+			remove_trait = cough
+			remove_trait = fever
+			remove_trait = diarrhea
+			remove_trait = vomiting
+			remove_trait = chest_pain
+			remove_trait = cramps
+			remove_trait = rash
+			remove_trait = headache
+			remove_trait = abdominal_pain
+			remove_trait = fatigue
+			remove_trait = malaise
+			remove_trait = infection
+			remove_trait = has_tuberculosis
+			remove_trait = has_typhoid_fever
+			remove_trait = has_typhus
+			remove_trait = has_bubonic_plague
+			remove_trait = has_measles
+			remove_trait = has_small_pox
+			remove_trait = flu
+			remove_trait = dysentery
+			remove_trait = gout
+			remove_trait = food_poisoning
+			remove_trait = rabies
+			remove_trait = cancer
+	}
+}
+character_event = {
+	id = EVTIM.18
+	desc = "EVTIM.18"
+	picture = GFX_evt_crusaders
+	trigger = {
+        trait = immortal
+		OR = {
+			trait = maimed
+			trait = severely_injured
+			trait = one_eyed
+			trait = one_handed
+			trait = one_legged
+			trait = disfigured
+			trait = mangled
+		}
+	}
+	mean_time_to_happen= {
+		months = 4
+	}
+	option = {
+		name = "EVTIM.19"
+		remove_trait = maimed
+			remove_trait = severely_injured
+			remove_trait = one_eyed
+			remove_trait = one_handed
+			remove_trait = one_legged
+			remove_trait = disfigured
+			remove_trait = mangled
+	}
+}
+character_event = {
+	id = EVTIM.20
+	desc = "EVTIM.20"
+	picture = GFX_evt_crusaders
+	trigger = {
+        trait = immortal
+		trait = wounded
+	}
+	mean_time_to_happen= {
+		months = 2
+	}
+	option = {
+		name = "EVTIM.21"
+		remove_trait = wounded
+	}
+}
+
+character_event = {
+	id = EVTIM.22
+	desc = "EVTIM.22"
+	picture = GFX_evt_crusaders
+	trigger = {
+        trait = immortal
+		OR {
+            NOT = { trait = brave }
+            trait = craven
+        }
+	}
+	mean_time_to_happen= {
+		months = 2
+	}
+	option = {
+		name = "EVTIM.23"
+        add_trait = brave
+		remove_trait = craven
+	}
+}
+
+character_event = {
+	id = EVTIM.24
+	desc = "EVTIM.24"
+	picture = GFX_evt_crusaders
+	trigger = {
+        trait = immortal
+		OR {
+            trait = stressed
+            trait = depressed
+        }
+	}
+	mean_time_to_happen= {
+		months = 4
+	}
+	option = {
+		name = "EVTIM.25"
+        remove_trait = stressed
+        remove_trait = depressed
+	}
+}

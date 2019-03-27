@@ -1,0 +1,9 @@
+revoke_all_titles_options = {
+	ruler_designer_cost = 0
+}
+huscarl = {
+	ruler_designer_cost = 0
+}
+invader = {
+	ruler_designer_cost = 0
+}

@@ -1,0 +1,139 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+revoke_all_titles_options;Revoke All Titles Options;;;;;;;;;;;;;x
+revoke_all_titles_options_desc;Unlocks extra decisions to customize start with ruler-designed characters.;;;;;;;;;;;;;x
+revoke_all_titles;Revoke All Titles;;;;;;;;;;;;;x
+revoke_all_titles_desc;Revoke every landed title in the realm for redistribution.;;;;;;;;;;;;;x
+replace_mercenary_captains;Replace Mercenary Captains;;;;;;;;;;;;;x
+replace_mercenary_captains_desc;Since you can't convert mercenary captains, you can chose instead to give it to a character of your religion and/or culture.;;;;;;;;;;;;;x
+conversion_options;Show Conversion Options;;;;;;;;;;;;;x
+conversion_options_desc;Open an event for quickly converting all provinces, vassals, and/or courtiers.;;;;;;;;;;;;;x
+invite_diplomat_free;Invite a Diplomat for Free;;;;;;;;;;;;;x
+invite_diplomat_free_desc;Recruit a nobleman skilled in diplomacy for service to the realm.;;;;;;;;;;;;;x
+invite_soldier_free;Invite a Soldier for Free;;;;;;;;;;;;;x
+invite_soldier_free_desc;Recruit a soldier skilled in martial arts for service to the realm.;;;;;;;;;;;;;x
+invite_steward_free;Invite a Steward for Free;;;;;;;;;;;;;x
+invite_steward_free_desc;Recruit a steward skilled in money management for service to the realm.;;;;;;;;;;;;;x
+invite_intriguer_free;Invite an Intriguer for Free;;;;;;;;;;;;;x
+invite_intriguer_free_desc;Recruit a shady character skilled in espionage for service to the realm.;;;;;;;;;;;;;x
+invite_priest_free;Invite a Priest for Free;;;;;;;;;;;;;x
+invite_priest_free_desc;Recruit a learned holy man for service to the realm.;;;;;;;;;;;;;x
+present_debutant_free;Present a Debutant for Free;;;;;;;;;;;;;x
+present_debutant_free_desc;Invite a woman of your religion and culture to your court.;;;;;;;;;;;;;x
+remove_all_options;Remove All Options;;;;;;;;;;;;;x
+remove_all_options_desc;Permanently remove the custom start decisions; never tempting you again.;;;;;;;;;;;;;x
+kill_all_courtiers;Kill All Courtiers;;;;;;;;;;;;;x
+kill_all_courtiers_desc;Get rid of baggage from the previous ruler.;;;;;;;;;;;;;x
+gain_independence;Gain Independence;;;;;;;;;;;;;x
+gain_independence_desc;Declare independence from your liege.;;;;;;;;;;;;;x
+recruit_fleet;Build a Fleet;;;;;;;;;;;;;x
+recruit_fleet_desc;Construct a fleet of 10 ships out of thin air. Useful for starting as a viking in a low-shipbuilding-tech realm.;;;;;;;;;;;;;x
+recruit_infantry;Recruit Infantry;;;;;;;;;;;;;x
+recruit_infantry_desc;Recruit able-bodied infantry men out of thin air to help defend your realm.;;;;;;;;;;;;;x
+recruit_cavalry_and_archers;Recruit Cavalry and/or Archers;;;;;;;;;;;;;x
+recruit_cavalry_and_archers_desc;Recruit able-bodied cavalrymen or archers out of thin air to help defend your realm.;;;;;;;;;;;;;x
+recruit_special_units;Recruit Special Units;;;;;;;;;;;;;x
+recruit_special_units_desc;Recruit fearsome special troops like horse archers, war elephants, and (*sigh*) camel cavalry.;;;;;;;;;;;;;x
+gold_menu;Add/Subtract Gold;;;;;;;;;;;;;x
+gold_menu_desc;Add or subtract money from your starting treasury.;;;;;;;;;;;;;x
+prestige_menu;Add/Subtract Prestige;;;;;;;;;;;;;x
+prestige_menu_desc;Add or subtract from your starting prestige.;;;;;;;;;;;;;x
+piety_menu;Add/Subtract Piety;;;;;;;;;;;;;x
+piety_menu_desc;Add or subtract from your starting piety.;;;;;;;;;;;;;x
+EVTDESCrat_events.1;As you survey your new-found realm, you find that there are certain aspects you simply do not like.;;;;;;;;;;;;;x
+EVTOPTArat_events.1;Time for some sweeping changes around here!;;;;;;;;;;;;;x
+EVTDESCrat_events.2;This is a message announcing the commencement of the realm purge. Effective immediately, all titles not held by the crown save nomadic titles and unlanded titular titles are hereby revoked.;;;;;;;;;;;;;x
+EVTOPTArat_events.2;Your liege thanks you for your cooperation!;;;;;;;;;;;;;x
+EVTDESCrat_events.3;Choose what you want to convert.;;;;;;;;;;;;;x
+EVTOPTArat_events.3;My counties;;;;;;;;;;;;;x
+EVTOPTBrat_events.3;My vassals;;;;;;;;;;;;;x
+EVTOPTCrat_events.3;My courtiers;;;;;;;;;;;;;x
+EVTOPTDrat_events.3;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.4;Life would be easier if all of my counties were...;;;;;;;;;;;;;x
+EVTOPTArat_events.4;...my religion.;;;;;;;;;;;;;x
+EVTOPTBrat_events.4;...my culture.;;;;;;;;;;;;;x
+EVTOPTCrat_events.4;...my religion and culture.;;;;;;;;;;;;;x
+EVTOPTDrat_events.4;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.5;Life would be easier if all of my vassals were...;;;;;;;;;;;;;x
+EVTOPTArat_events.5;...my religion.;;;;;;;;;;;;;x
+EVTOPTBrat_events.5;...my culture.;;;;;;;;;;;;;x
+EVTOPTCrat_events.5;...my religion and culture.;;;;;;;;;;;;;x
+EVTOPTDrat_events.5;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.6;Life would be easier if all of my courtiers were...;;;;;;;;;;;;;x
+EVTOPTArat_events.6;...my religion.;;;;;;;;;;;;;x
+EVTOPTBrat_events.6;...my culture.;;;;;;;;;;;;;x
+EVTOPTCrat_events.6;...my religion and culture.;;;;;;;;;;;;;x
+EVTOPTDrat_events.6;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.7;Replace all mercenary captains with characters of...;;;;;;;;;;;;;x
+EVTOPTArat_events.7;...my religion.;;;;;;;;;;;;;x
+EVTOPTBrat_events.7;...my culture.;;;;;;;;;;;;;x
+EVTOPTCrat_events.7;...my religion and culture.;;;;;;;;;;;;;x
+EVTOPTDrat_events.7;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.8;Are you sure you want to remove all additional options?;;;;;;;;;;;;;x
+EVTOPTArat_events.8;Yes;;;;;;;;;;;;;x
+EVTOPTBrat_events.8;No;;;;;;;;;;;;;x
+EVTDESCrat_events.9;Who do you want dead?;;;;;;;;;;;;;x
+EVTOPTArat_events.9;All courtiers except council;;;;;;;;;;;;;x
+EVTOPTBrat_events.9;All courtiers;;;;;;;;;;;;;x
+EVTOPTCrat_events.9;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.10;Are you sure you want to declare independence?;;;;;;;;;;;;;x
+EVTOPTArat_events.10;Yes;;;;;;;;;;;;;x
+EVTOPTBrat_events.10;No;;;;;;;;;;;;;x
+EVTDESCrat_events.11;Which type of troops do you want to recruit?;;;;;;;;;;;;;x
+EVTOPTArat_events.11;Spawn 500 light infantry.;;;;;;;;;;;;;x
+EVTOPTBrat_events.11;Spawn 500 heavy infantry.;;;;;;;;;;;;;x
+EVTOPTCrat_events.11;Spawn 500 pikemen.;;;;;;;;;;;;;x
+EVTOPTDrat_events.11;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.12;Which type of troops do you want to recruit?;;;;;;;;;;;;;x
+EVTOPTArat_events.12;Spawn 500 light cavalry.;;;;;;;;;;;;;x
+EVTOPTBrat_events.12;Spawn 500 heavy cavalry.;;;;;;;;;;;;;x
+EVTOPTCrat_events.12;Spawn 500 archers.;;;;;;;;;;;;;x
+EVTOPTDrat_events.12;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.13;Which type of troops do you want to recruit?;;;;;;;;;;;;;x
+EVTOPTArat_events.13;Spawn 500 horse archers.;;;;;;;;;;;;;x
+EVTOPTBrat_events.13;Spawn 500 camel cavalry.;;;;;;;;;;;;;x
+EVTOPTCrat_events.13;Spawn 500 war elephants.;;;;;;;;;;;;;x
+EVTOPTDrat_events.13;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.14;How much gold?;;;;;;;;;;;;;x
+EVTOPTArat_events.14;Add 1 gold.;;;;;;;;;;;;;x
+EVTOPTBrat_events.14;Add 10 gold.;;;;;;;;;;;;;x
+EVTOPTCrat_events.14;Add 100 gold.;;;;;;;;;;;;;x
+EVTOPTDrat_events.14;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.15;How much gold?;;;;;;;;;;;;;x
+EVTOPTArat_events.15;Subtract 1 gold.;;;;;;;;;;;;;x
+EVTOPTBrat_events.15;Subtract 10 gold.;;;;;;;;;;;;;x
+EVTOPTCrat_events.15;Subtract 100 gold.;;;;;;;;;;;;;x
+EVTOPTDrat_events.15;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.16;How much prestige?;;;;;;;;;;;;;x
+EVTOPTArat_events.16;Add 1 prestige.;;;;;;;;;;;;;x
+EVTOPTBrat_events.16;Add 10 prestige.;;;;;;;;;;;;;x
+EVTOPTCrat_events.16;Add 100 prestige.;;;;;;;;;;;;;x
+EVTOPTDrat_events.16;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.17;How much prestige?;;;;;;;;;;;;;x
+EVTOPTArat_events.17;Subtract 1 prestige.;;;;;;;;;;;;;x
+EVTOPTBrat_events.17;Subtract 10 prestige.;;;;;;;;;;;;;x
+EVTOPTCrat_events.17;Subtract 100 prestige.;;;;;;;;;;;;;x
+EVTOPTDrat_events.17;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.18;How much piety?;;;;;;;;;;;;;x
+EVTOPTArat_events.18;Add 1 piety.;;;;;;;;;;;;;x
+EVTOPTBrat_events.18;Add 10 piety.;;;;;;;;;;;;;x
+EVTOPTCrat_events.18;Add 100 piety.;;;;;;;;;;;;;x
+EVTOPTDrat_events.18;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.19;How much piety?;;;;;;;;;;;;;x
+EVTOPTArat_events.19;Subtract 1 piety.;;;;;;;;;;;;;x
+EVTOPTBrat_events.19;Subtract 10 piety.;;;;;;;;;;;;;x
+EVTOPTCrat_events.19;Subtract 100 piety.;;;;;;;;;;;;;x
+EVTOPTDrat_events.19;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.20;Add or subtract gold?;;;;;;;;;;;;;x
+EVTOPTArat_events.20;Add gold.;;;;;;;;;;;;;x
+EVTOPTBrat_events.20;Subtract gold.;;;;;;;;;;;;;x
+EVTOPTCrat_events.20;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.21;Add or subtract prestige?;;;;;;;;;;;;;x
+EVTOPTArat_events.21;Add prestige.;;;;;;;;;;;;;x
+EVTOPTBrat_events.21;Subtract prestige.;;;;;;;;;;;;;x
+EVTOPTCrat_events.21;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.22;Add or subtract piety?;;;;;;;;;;;;;x
+EVTOPTArat_events.22;Add piety.;;;;;;;;;;;;;x
+EVTOPTBrat_events.22;Subtract piety.;;;;;;;;;;;;;x
+EVTOPTCrat_events.22;Cancel;;;;;;;;;;;;;x
+EVTDESCrat_events.23;This is a message announcing the commencement of the realm purge. Effective immediately, all titles not held by the crown save nomadic titles, unlanded titular titles, and baronies are hereby revoked.;;;;;;;;;;;;;x
+EVTOPTArat_events.23;Your liege thanks you for your cooperation!;;;;;;;;;;;;;x

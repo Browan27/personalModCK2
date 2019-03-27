@@ -1,0 +1,785 @@
+# Revoke All Titles Events
+namespace = rat_events
+
+# Remove Unecessary Traits
+character_event = {
+	id = rat_events.1
+	desc = "EVTDESCrat_events.1"
+	
+	trigger = {
+		trait = revoke_all_titles_options
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "EVTOPTArat_events.1" # Time for some sweeping changes around here!
+		IF = {
+			limit = { trait = revoke_all_titles_options }
+			remove_trait = revoke_all_titles_options
+			set_character_flag = ruler_designed_char
+		}
+	}
+}
+
+# Conversion Options
+character_event = {
+	id = rat_events.3
+	desc = "EVTDESCrat_events.3" # Choose what you want to convert.
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.3" # My counties
+		character_event = { id = rat_events.4 }
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.3" # My vassals
+		character_event = { id = rat_events.5 }
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.3" # My courtiers
+		character_event = { id = rat_events.6 }
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.3" # Cancel
+	}
+}
+
+# Convert Provinces
+character_event = {
+	id = rat_events.4
+	desc = "EVTDESCrat_events.4"
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.4" # ...my religion.
+		any_realm_province = {
+			religion = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.4" # ...my culture.
+		any_realm_province = {
+			culture = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.4" # ...my religion and culture.
+		any_realm_province = {
+			religion = ROOT
+		}
+		any_realm_province = {
+			culture = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.4" # Cancel.
+	}
+}
+
+# Convert Vassals
+character_event = {
+	id = rat_events.5
+	desc = "EVTDESCrat_events.5"
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.5" # ...my religion.
+		any_realm_lord = {
+			religion = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.5" # ...my culture.
+		any_realm_lord = {
+			culture = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.5" # ...my religion and culture.
+		any_realm_lord = {
+			religion = ROOT
+		}
+		any_realm_lord = {
+			culture = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.5" # Cancel.
+	}
+}
+
+# Convert Courtiers
+character_event = {
+	id = rat_events.6
+	desc = "EVTDESCrat_events.6"
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.6" # ...my religion.
+		any_courtier = {
+			religion = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.6" # ...my culture.
+		any_courtier = {
+			culture = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.6" # ...my religion and culture.
+		any_courtier = {
+			religion = ROOT
+		}
+		any_courtier = {
+			culture = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.6" # Cancel.
+	}
+}
+
+# Replace Mercenary Captains Options
+character_event = {
+	id = rat_events.7
+	desc = "EVTDESCrat_events.7" # Replace all mercenary captains with characters of...
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.7" # ...my religion.
+		any_vassal = {
+			any_demesne_title = {
+				IF = {
+					limit = { mercenary = yes }
+					create_random_soldier = { 
+						religion = ROOT
+					}
+					new_character = {
+						grant_title = PREV
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.7" # ...my culture.
+		any_vassal = {
+			any_demesne_title = {
+				IF = {
+					limit = { mercenary = yes }
+					create_random_soldier = {
+						culture = ROOT
+					}
+					new_character = {
+						grant_title = PREV
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.7" # ...my religion and culture.
+		any_vassal = {
+			any_demesne_title = {
+				IF = {
+					limit = { mercenary = yes }
+					create_random_soldier = { 
+						religion = ROOT
+						culture = ROOT
+					}
+					new_character = {
+						grant_title = PREV
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.7" # Cancel.
+	}
+}
+
+# Remove All Options
+character_event = {
+	id = rat_events.8
+	desc = "EVTDESCrat_events.8" # Are you sure?
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.8" # Yes
+		set_character_flag = removed_options
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.8" # No
+	}
+}
+
+# Kill All Courtiers
+character_event = {
+	id = rat_events.9
+	desc = "EVTDESCrat_events.9" # Who do you want dead?
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.9" # All courtiers except council
+		any_courtier = {
+			limit = { is_councillor  = no }
+			limit = { is_landed  = no }
+			death = {
+				death_reason = death_murder_unknown
+				killer = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.9" # All courtiers
+		any_courtier = {
+			limit = { is_landed  = no }
+			death = {
+				death_reason = death_murder_unknown
+				killer = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.9" # Cancel
+	}
+}
+
+# Gain Independence Confirmation
+character_event = {
+	id = rat_events.10
+	desc = "EVTDESCrat_events.10" # Are you sure you want to declare independence?
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.10" # Yes
+		set_defacto_liege = ROOT
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.10" # No
+	}
+	
+}
+
+# Recruit Infantry Menu
+character_event = {
+	id = rat_events.11
+	desc = "EVTDESCrat_events.11"
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.11" # Spawn 500 light infantry
+		capital_scope = {
+			PREV = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						light_infantry = { 500 500 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.11" # Spawn 500 heavy infantry
+		capital_scope = {
+			PREV = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						heavy_infantry = { 500 500 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.11" # Spawn 500 pikemen
+		capital_scope = {
+			PREV = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						pikemen = { 500 500 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.11" # Cancel
+	}
+}
+
+# Recruit Cavalry/Archers Menu
+character_event = {
+	id = rat_events.12
+	desc = "EVTDESCrat_events.12" 
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.12" # Spawn 500 light cavalry
+		capital_scope = {
+			PREV = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						light_cavalry = { 500 500 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.12" # Spawn 500 heavy cavalry
+		capital_scope = {
+			PREV = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						knights = { 500 500 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.12" # Spawn 500 archers
+		capital_scope = {
+			PREV = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						archers = { 500 500 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.12" # Cancel
+	}
+}
+
+# Recruit Special Troops
+character_event = {
+	id = rat_events.13
+	desc = "EVTDESCrat_events.13" 
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.13" # Spawn 500 horse archers
+		capital_scope = {
+			PREV = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						horse_archers = { 500 500 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.13" # Spawn 500 camel cavalry
+		capital_scope = {
+			PREV = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						camel_cavalry = { 500 500 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.13" # Spawn 500 war elephants
+		capital_scope = {
+			PREV = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						war_elephants = { 500 500 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.13" # Cancel
+	}
+}
+
+# Add Gold Menu
+character_event = {
+	id = rat_events.14
+	desc = "EVTDESCrat_events.14" 
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.14" # Add 1 gold
+		wealth = 1
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.14" # Add 10 gold
+		wealth = 10
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.14" # Add 100 gold
+		wealth = 100
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.14" # Cancel
+	}
+}
+
+# Subtract Gold Menu
+character_event = {
+	id = rat_events.15
+	desc = "EVTDESCrat_events.15" 
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.15" # Subtract 1 gold
+		wealth = -1
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.15" # Subtract 10 gold
+		wealth = -10
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.15" # Subtract 100 gold
+		wealth = -100
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.15" # Cancel
+	}
+}
+
+# Add Prestige Menu
+character_event = {
+	id = rat_events.16
+	desc = "EVTDESCrat_events.16" 
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.16" # Add 1 prestige
+		prestige = 1
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.16" # Add 10 prestige
+		prestige = 10
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.16" # Add 100 prestige
+		prestige = 100
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.16" # Cancel
+	}
+}
+
+# Subtract Prestige Menu
+character_event = {
+	id = rat_events.17
+	desc = "EVTDESCrat_events.17" 
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.17" # Subtract 1 prestige
+		prestige = -1
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.17" # Subtract 10 prestige
+		prestige = -10
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.17" # Subtract 100 prestige
+		prestige = -100
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.17" # Cancel
+	}
+}
+
+# Add Piety Menu
+character_event = {
+	id = rat_events.18
+	desc = "EVTDESCrat_events.18" 
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.18" # Add 1 piety
+		piety = 1
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.18" # Add 10 piety
+		piety = 10
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.18" # Add 100 piety
+		piety = 100
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.18" # Cancel
+	}
+}
+
+# Subtract Piety Menu
+character_event = {
+	id = rat_events.19
+	desc = "EVTDESCrat_events.19" 
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.19" # Subtract 1 piety
+		piety = -1
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.19" # Subtract 10 piety
+		piety = -10
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.19" # Subtract 100 piety
+		piety = -100
+	}
+	
+	option = {
+		name = "EVTOPTDrat_events.19" # Cancel
+	}
+}
+
+# Add/Subtract Gold Menu
+character_event = {
+	id = rat_events.20
+	desc = "EVTDESCrat_events.20" # Add or subtract gold?
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.20" # Add Gold
+		character_event = { id = rat_events.14 }
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.20" # Subtract Gold
+		character_event = { id = rat_events.15 }
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.20" # Cancel
+	}
+}
+
+# Add/Subtract Prestige Menu
+character_event = {
+	id = rat_events.21
+	desc = "EVTDESCrat_events.21" # Add or subtract presitge?
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.21" # Add Prestige
+		character_event = { id = rat_events.16 }
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.21" # Subtract Prestige
+		character_event = { id = rat_events.17 }
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.21" # Cancel
+	}
+}
+
+# Add/Subtract Piety Menu
+character_event = {
+	id = rat_events.22
+	desc = "EVTDESCrat_events.22" # Add or subtract piety?
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.22" # Add Piety
+		character_event = { id = rat_events.18 }
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.22" # Subtract Piety
+		character_event = { id = rat_events.19 }
+	}
+	
+	option = {
+		name = "EVTOPTCrat_events.22" # Cancel
+	}
+}
+
+# Become Feudal
+character_event = {
+	id = rat_events.24
+	desc = "EVTDESCrat_events.24" # Are you sure you want to become feudal?
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.24" # Yes
+		set_government_type = feudal_government
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.24" # No
+	}
+	
+}
+
+# Become Iqta
+character_event = {
+	id = rat_events.25
+	desc = "EVTDESCrat_events.25" # Are you sure you want to become an iqta?
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTArat_events.25" # Yes
+		set_government_type = muslim_government
+	}
+	
+	option = {
+		name = "EVTOPTBrat_events.25" # No
+	}
+	
+}

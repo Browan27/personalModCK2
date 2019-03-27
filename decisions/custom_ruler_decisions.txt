@@ -1,0 +1,467 @@
+decisions = {
+	
+	replace_mercenary_captains = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			any_vassal {
+				any_demesne_title = {
+					mercenary = yes
+					holy_order = no
+				}
+			}
+		}
+		
+		effect = {
+			character_event = { id = rat_events.7 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	conversion_options = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			character_event = { id = rat_events.3 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	invite_diplomat_free = {
+		is_high_prio = yes
+		
+		potential = { 
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			create_random_diplomat = {
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				ethnicity = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	invite_soldier_free = {
+		is_high_prio = yes
+		
+		potential = { 
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			create_random_soldier = {
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				ethnicity = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	invite_steward_free = {
+		is_high_prio = yes
+		
+		potential = { 
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			create_random_steward = {
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				ethnicity = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	invite_intriguer_free = {
+		is_high_prio = yes
+		
+		potential = { 
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			create_random_intriguer = {
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				ethnicity = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	invite_priest_free = {
+		is_high_prio = yes
+		
+		potential = { 
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			create_random_priest = {
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				ethnicity = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	present_debutant_free = {
+		is_high_prio = yes
+		
+		potential = { 
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			create_character = {
+				female = yes
+				random_traits = yes
+				religion = ROOT
+				culture = ROOT
+				ethnicity = ROOT
+				age = 17
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	remove_all_options = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			character_event = { id = rat_events.8}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	kill_all_courtiers = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			character_event = { id = rat_events.9 }
+		}
+		
+		ai_will_do = {
+			factor = 0	
+		}
+	}
+	
+	gain_independence = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+			NOT = { de_facto_liege = ROOT }
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+			NOT = { de_facto_liege = ROOT }
+		}
+		
+		effect = {
+			character_event = { id = rat_events.10 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	recruit_fleet = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			spawn_fleet = {
+				province = closest
+				owner = ROOT
+				disband_on_peace = no
+				troops = {
+					galleys = {100 100}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	recruit_infantry = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			character_event = { id = rat_events.11 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	recruit_cavalry_and_archers = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			character_event = { id = rat_events.12 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	recruit_special_units = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			character_event = { id = rat_events.13 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	gold_menu = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			character_event = { id = rat_events.20 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	prestige_menu = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			character_event = { id = rat_events.21 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	piety_menu = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_character_flag = removed_options }
+			has_character_flag = ruler_designed_char
+		}
+		
+		allow = {
+			has_character_flag = ruler_designed_char
+		}
+		
+		effect = {
+			character_event = { id = rat_events.22 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# become_feudal = {
+		# is_high_prio = yes
+		
+		# potential = {
+			# NOT = { has_character_flag = removed_options }
+			# has_character_flag = ruler_designed_char
+			# NOT = { government = feudal_government }
+			# NOT = { government = muslim_government }
+			# NOT = { religion_group = muslim }
+		# }
+		
+		# allow = {
+			# has_character_flag = ruler_designed_char
+		# }
+		
+		# effect = {
+			# character_event = { id = rat_events.24 }
+		# }
+	# }
+	
+	# become_iqta = {
+		# is_high_prio = yes
+		
+		# potential = {
+			# NOT = { has_character_flag = removed_options }
+			# has_character_flag = ruler_designed_char
+			# NOT = { government = muslim_government }
+			# NOT = { government = feudal_government }
+			# religion_group = muslim
+		# }
+		
+		# allow = {
+			# has_character_flag = ruler_designed_char
+		# }
+		
+		# effect = {
+			# character_event = { id = rat_events.25 }
+		# }
+	# }
+	
+}
